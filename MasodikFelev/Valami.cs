@@ -38,6 +38,7 @@ class Valami{
         int timer = 0;
         int babuX = N/2;
         int babuY = M/2;
+        int teleHas = 10;
         Console.SetCursorPosition(babuX, babuY);
         Console.Write('X');
         KajaElhelyez(30);
@@ -81,6 +82,12 @@ class Valami{
                         babuX++;
                         Console.SetCursorPosition(babuX, babuY);
                         Console.Write('X');
+                    }
+
+                    if ( palya[babuX, babuY] > 0){
+                        teleHas += palya[babuX, babuY];
+                        palya[babuX, babuY] = 0;
+
                     }
             }
         }
