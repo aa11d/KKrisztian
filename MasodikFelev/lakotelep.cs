@@ -43,7 +43,7 @@ class Lakotelep{
                 }
             }
         }
-        Console.Write(lakas);
+        Console.WriteLine(lakas);
     }
 
     static void epulet(){
@@ -65,17 +65,64 @@ class Lakotelep{
     }
 
     static void panorama(){
-
+         int panoramasdb = 0; 
         for (int x = 0; x < N; x++)
         {
             for (int y = 0; y < M; y++)
             {
                 if (palya[x,y] > 0)
                 {
-                    
+                    bool van = false;
+                    for (int i = x+1; i < N; i++)
+                    {
+                        if (palya[i,y] >= palya[x,y])
+                        {
+                           van = true;
+                        }
+                    }
+                    if (!van)
+                    {
+                        panoramasdb++;
+                    }
+                    for (int j = x-1; j >=0 ; j--)
+                    {
+                        if (palya[j,y] >= palya[x,y])
+                        {
+                            van = true;
+                        }
+                    }
+                    if (!van)
+                    {
+                        panoramasdb++;
+                    }
+                    for (int k = y+1; k < M; k++)
+                    {
+                        if (palya[x,k] >= palya[x,y])
+                        {
+                            van = true;
+                        }
+                    }
+                    if (!van)
+                    {
+                        panoramasdb++;
+                    }
+                    for (int l = y-1; l >= 0; l--)
+                    {
+                        if (palya[x,l] >= palya[x,y])
+                        {
+                            van = true;
+                        }
+                    }
+                    if (!van)
+                    {
+                        panoramasdb++;
+                    }
                 }
+
+
             }
         }
+        Console.WriteLine($"Panorámás lakások: {panoramasdb}");
 
     }
 
