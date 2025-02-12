@@ -1,6 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Labda",
+    "\\Labda\\Labda",
+    "\\WinFormsApp1",
+    "\\WinFormsApp1\\WinFormsApp1"
   ],
+  "SelectedNode": "\\Labda\\Labda\\Form1.cs",
   "PreviewInSolutionExplorer": false
 }
