@@ -7,13 +7,13 @@ namespace WinFormsApp1
             InitializeComponent();
         }
         bool elsoSzam;
-        int bal, jobb;
+        float bal, jobb;
         char muvelet;
 
         private void MuvKatt(object sender, EventArgs e)
         {
             bool hiba = false;
-            int ered = 0;
+           float ered = 0;
 
             char muv = (sender as Button).Text[0];
 
@@ -31,7 +31,7 @@ namespace WinFormsApp1
                     case '-':
                     case '*':
                     case '/':
-                        bal = int.Parse( textBox1.Text );
+                        bal = float.Parse( textBox1.Text );
                         muvelet = muv;
                         listBox1.Items.Add(textBox1.Text + " " + muvelet.ToString() + " " );
                         elsoSzam = false;
@@ -41,7 +41,7 @@ namespace WinFormsApp1
             }
             else // a második szám után ütöttek mûveleti jelet
             {
-                jobb = int.Parse( textBox1.Text );
+                jobb = float.Parse( textBox1.Text );
                 switch (muvelet)
                 {
                     case '+':
