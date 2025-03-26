@@ -1,0 +1,57 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\KKrisztian\\KKrisztian\\rendezes\\Rendezes\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A135228A-823E-47B3-99CF-A2B781CDA98E}|Rendezes\\Rendezes.csproj|d:\\kkrisztian\\kkrisztian\\rendezes\\rendezes\\rendezes\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A135228A-823E-47B3-99CF-A2B781CDA98E}|Rendezes\\Rendezes.csproj|solutionrelative:rendezes\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A135228A-823E-47B3-99CF-A2B781CDA98E}|Rendezes\\Rendezes.csproj|d:\\kkrisztian\\kkrisztian\\rendezes\\rendezes\\rendezes\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A135228A-823E-47B3-99CF-A2B781CDA98E}|Rendezes\\Rendezes.csproj|solutionrelative:rendezes\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "D:\\KKrisztian\\KKrisztian\\rendezes\\Rendezes\\Rendezes\\Form1.cs",
+              "RelativeDocumentMoniker": "Rendezes\\Form1.cs",
+              "ToolTip": "D:\\KKrisztian\\KKrisztian\\rendezes\\Rendezes\\Rendezes\\Form1.cs",
+              "RelativeToolTip": "Rendezes\\Form1.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAUwEMAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T12:10:07.688Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "D:\\KKrisztian\\KKrisztian\\rendezes\\Rendezes\\Rendezes\\Form1.cs",
+              "RelativeDocumentMoniker": "Rendezes\\Form1.cs",
+              "ToolTip": "D:\\KKrisztian\\KKrisztian\\rendezes\\Rendezes\\Rendezes\\Form1.cs [Design]",
+              "RelativeToolTip": "Rendezes\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T12:07:52.195Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
