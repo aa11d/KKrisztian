@@ -57,6 +57,38 @@ class Orai{
         return par;
     }
 
+
+    static Par URend(){
+        Par par;
+        par.ossze = 0;
+        par.csere = 0;
+        for ( int vege = N-1; vege >= 0; vege--){
+            for (int akt = 0; akt <= vege; akt++){
+                par.ossze++;
+                if ( tomb[akt] > tomb[akt+1]){
+                    par.csere++;
+                    csere(akt, akt+1);
+                }
+            }
+        }
+        return par;
+    }
+
+    static Par MRend(){
+        Par par;
+        par.ossze = 0;
+        par.csere = 0;
+
+
+
+
+
+
+
+
+        return par;
+    }
+
     static int logKer(int mit)
     {
         int eleje = 0, vege = N-1;
@@ -91,13 +123,13 @@ class Orai{
         }
         // kiir();
 
-        int[] ment = (int[]) tomb.Clone();
+       /* int[] ment = (int[]) tomb.Clone();
 
-        Par bub = boburek();
+        Par bub = buborek();
         // kiir();
         System.Console.WriteLine(bub.ossze+"--"+bub.csere);
         tomb = (int[]) ment.Clone();
-        Par min = minKivRend;
+        Par min = minKivRend();
         // kiir();
         System.Console.WriteLine(min.ossze+"--"+min.csere);
 
@@ -112,5 +144,9 @@ class Orai{
         {
             System.Console.WriteLine("Nincs benne");
         }
+        */
+        //Par rendu = URend();
+        //kiir();
+        //System.Console.WriteLine(rendu.ossze+"--"+rendu.csere);
     }
 }
