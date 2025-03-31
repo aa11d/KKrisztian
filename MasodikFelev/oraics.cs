@@ -74,18 +74,28 @@ class Orai{
         return par;
     }
 
-    static Par MRend(){
+    static Par SRend()
+    {
         Par par;
         par.ossze = 0;
         par.csere = 0;
 
+        for (int i = 1; i < N; i++)
+        {
+            int key = tomb[i];
+            int j = i - 1;
 
+            while (j >= 0 && tomb[j] > key)
+            {
+                tomb[j + 1] = tomb[j];
+                j--;
+                par.ossze++;
+                par.csere++;
+            }
 
-
-
-
-
-
+            tomb[j + 1] = key;
+            if (j != i - 1) par.csere++;
+        }
         return par;
     }
 
@@ -148,5 +158,8 @@ class Orai{
         //Par rendu = URend();
         //kiir();
         //System.Console.WriteLine(rendu.ossze+"--"+rendu.csere);
+        Par rends = SRend();
+        kiir();
+        System.Console.WriteLine(rends.ossze+"--"+rends.csere);
     }
 }
