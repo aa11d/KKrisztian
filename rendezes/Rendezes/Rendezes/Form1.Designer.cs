@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
             button1 = new Button();
             button2 = new Button();
             button3 = new Button();
@@ -43,7 +42,9 @@
             button12 = new Button();
             button13 = new Button();
             button14 = new Button();
-            timer1 = new System.Windows.Forms.Timer(components);
+            button15 = new Button();
+            KozvCsere = new Button();
+            BeszR = new Button();
             SuspendLayout();
             // 
             // button1
@@ -170,20 +171,48 @@
             button14.Name = "button14";
             button14.Size = new Size(75, 23);
             button14.TabIndex = 13;
-            button14.Text = "button14";
+            button14.Text = "BuborékR";
             button14.UseVisualStyleBackColor = true;
             button14.Click += button14_Click;
             // 
-            // timer1
+            // button15
             // 
-            timer1.Enabled = true;
-            timer1.Tick += timer1_Tick;
+            button15.Location = new Point(365, 259);
+            button15.Name = "button15";
+            button15.Size = new Size(75, 23);
+            button15.TabIndex = 14;
+            button15.Text = "MinRendezés";
+            button15.UseVisualStyleBackColor = true;
+            button15.Click += button15_Click;
+            // 
+            // KozvCsere
+            // 
+            KozvCsere.Location = new Point(122, 259);
+            KozvCsere.Name = "KozvCsere";
+            KozvCsere.Size = new Size(109, 23);
+            KozvCsere.TabIndex = 15;
+            KozvCsere.Text = "KözvetlenCsere";
+            KozvCsere.UseVisualStyleBackColor = true;
+            KozvCsere.Click += KozvCsere_Click;
+            // 
+            // BeszR
+            // 
+            BeszR.Location = new Point(473, 259);
+            BeszR.Name = "BeszR";
+            BeszR.Size = new Size(111, 23);
+            BeszR.TabIndex = 16;
+            BeszR.Text = "BeszúrásosCsere";
+            BeszR.UseVisualStyleBackColor = true;
+            BeszR.Click += BeszR_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(BeszR);
+            Controls.Add(KozvCsere);
+            Controls.Add(button15);
             Controls.Add(button14);
             Controls.Add(button13);
             Controls.Add(button9);
@@ -220,6 +249,8 @@
         private Button button12;
         private Button button13;
         private Button button14;
-        private System.Windows.Forms.Timer timer1;
+        private Button button15;
+        private Button KozvCsere;
+        private Button BeszR;
     }
 }

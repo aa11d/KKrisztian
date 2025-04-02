@@ -25,6 +25,34 @@ namespace Rendezes
             }
         }
 
+        void Csere(int i, int j)
+        {
+            Button ment = tomb[i];
+            tomb[i] = tomb[j];
+            tomb[j] = ment;
+            tomb[i].BringToFront();
+            tomb[j].BringToFront();
+            int ileft = tomb[i].Left;
+            int jleft = tomb[j].Left;
+            while (Math.Abs(ileft - tomb[j].Left) > 10)
+            {
+                if (ileft < jleft)
+                {
+                    tomb[i].Left += 10;
+                    tomb[j].Left -= 10;
+                }
+                else
+                {
+                    tomb[i].Left -= 10;
+                    tomb[j].Left += 10;
+                }
+                Refresh();
+                Thread.Sleep(100);
+            }
+            tomb[i].Left = jleft;
+            tomb[j].Left = ileft;
+        }
+
         private void button14_Click(object sender, EventArgs e)
         {
             int csere = 0;
@@ -36,41 +64,48 @@ namespace Rendezes
                     ossz++;
                     if (tomb[mutato].Text.CompareTo(tomb[mutato + 1].Text) > 0)
                     {
-                        Button ment = tomb[mutato];
-                        tomb[mutato] = tomb[mutato + 1];
-                        tomb[mutato + 1] = ment;
-                        csere++;
-                        h1 = tomb[mutato + 1].Left;
-                        v1 = tomb[mutato].Left;
-                        m1 = tomb[mutato];
-                        h2 = tomb[mutato].Left;
-                        v2 = tomb[mutato + 1].Left;
-                        m2 = tomb[mutato + 1];
+                        Csere(mutato, mutato + 1);
                     }
                 }
             }
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void button15_Click(object sender, EventArgs e)
         {
-            if ( m1 != null )
+            for (int honnan = 0; honnan <= 10; honnan++)
             {
-                m1.Left += (h1 - v1) / 10;
-                if ( Math.Abs(m1.Left - v1) < 15)
+                int minind = honnan;
+                tomb[minind].BackColor = Color.Green;
+                for (int i = honnan + 1; i < 12; i++)
                 {
-                    m1.Left = v1;
-                    m1 = null;
+                    tomb[i].BackColor = Color.Red;
+                    if (tomb[i].Text.CompareTo(tomb[minind].Text) < tomb[minind].Text.CompareTo(tomb[i].Text))
+                    {
+                        tomb[minind].BackColor = Color.Gray;
+                        minind = i;
+                        tomb[i].BackColor = Color.Green;
+                    }
+                    Refresh();
+                    Thread.Sleep(100);
+                    if ( i != minind )
+                    {
+                        tomb[i].BackColor = Color.Gray;
+                    }
+                    
                 }
+
+                Csere(honnan, minind);
             }
-            if (m2 != null)
-            {
-                m2.Left += (h2 - v2) / 10;
-                if (Math.Abs(m2.Left - v2) < 15)
-                {
-                    m2.Left = v2;
-                    m2 = null;
-                }
-            }
+        }
+
+        private void KozvCsere_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BeszR_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

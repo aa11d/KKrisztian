@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\MasodikFelev"
+    "\\MasodikFelev",
+    "\\rendezes",
+    "\\rendezes\\Rendezes",
+    "\\rendezes\\Rendezes\\Rendezes"
   ],
+  "SelectedNode": "\\rendezes\\Rendezes\\Rendezes.sln",
   "PreviewInSolutionExplorer": false
 }
