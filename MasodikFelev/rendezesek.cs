@@ -125,6 +125,26 @@ class Orai{
         }
     }
 
+    static void ZRend()
+    {
+        int currentp = 0;
+        int[] mtomb = new int[ tomb.Length ];
+            for (int i = 0; i < mtomb.Length; i++)
+            {
+                if ( tomb[i] > tomb[i+1])
+                {
+                    currentp++;
+                }
+                if (mtomb[i] == mtomb[currentp])
+                {
+                    mtomb[i+1] = mtomb[currentp];
+                }
+                else {mtomb[currentp] = tomb[i];}
+            }
+        tomb = mtomb;
+    }
+
+
     static void Main(){
         tomb = new int[N];
         Random rnd = new ();

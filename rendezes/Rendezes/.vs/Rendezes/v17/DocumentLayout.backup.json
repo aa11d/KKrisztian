@@ -18,12 +18,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -32,7 +28,7 @@
               "RelativeDocumentMoniker": "Rendezes\\Form1.cs",
               "ToolTip": "D:\\KKrisztian\\KKrisztian\\rendezes\\Rendezes\\Rendezes\\Form1.cs",
               "RelativeToolTip": "Rendezes\\Form1.cs",
-              "ViewState": "AgIAAEAAAAAAAAAAAAAcwFgAAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAmwFQAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-26T12:10:07.688Z",
               "EditorCaption": ""
@@ -46,8 +42,7 @@
               "ToolTip": "D:\\KKrisztian\\KKrisztian\\rendezes\\Rendezes\\Rendezes\\Form1.cs [Design]",
               "RelativeToolTip": "Rendezes\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T12:07:52.195Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-03-26T12:07:52.195Z"
             }
           ]
         }
