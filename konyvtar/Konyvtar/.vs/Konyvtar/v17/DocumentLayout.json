@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "D:\\KKrisztian\\KKrisztian\\konyvtar\\Konyvtar\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9EA8535E-216B-42A7-B654-D252BE39798E}|Konyvtar.csproj|d:\\kkrisztian\\kkrisztian\\konyvtar\\konyvtar\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9EA8535E-216B-42A7-B654-D252BE39798E}|Konyvtar.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9EA8535E-216B-42A7-B654-D252BE39798E}|Konyvtar.csproj|D:\\KKrisztian\\KKrisztian\\konyvtar\\Konyvtar\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9EA8535E-216B-42A7-B654-D252BE39798E}|Konyvtar.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9EA8535E-216B-42A7-B654-D252BE39798E}|Konyvtar.csproj|d:\\kkrisztian\\kkrisztian\\konyvtar\\konyvtar\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{9EA8535E-216B-42A7-B654-D252BE39798E}|Konyvtar.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{9EA8535E-216B-42A7-B654-D252BE39798E}|Konyvtar.csproj|d:\\kkrisztian\\kkrisztian\\konyvtar\\konyvtar\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9EA8535E-216B-42A7-B654-D252BE39798E}|Konyvtar.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,24 +18,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Form1.cs",
               "DocumentMoniker": "D:\\KKrisztian\\KKrisztian\\konyvtar\\Konyvtar\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
               "ToolTip": "D:\\KKrisztian\\KKrisztian\\konyvtar\\Konyvtar\\Form1.cs",
               "RelativeToolTip": "Form1.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAiwEYAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAF4AAAAAAAAAAAAqwHgAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-12T08:25:18.591Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "D:\\KKrisztian\\KKrisztian\\konyvtar\\Konyvtar\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",

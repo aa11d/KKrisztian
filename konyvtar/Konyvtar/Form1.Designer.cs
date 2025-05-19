@@ -45,9 +45,24 @@
             KKSzerkeszt = new Button();
             KKListbox = new ListBox();
             tabPage2 = new TabPage();
+            OOEletkor = new TextBox();
+            OOCim = new TextBox();
+            OONev = new TextBox();
+            OOAzonsito = new TextBox();
+            OOTorles = new Button();
+            label4 = new Label();
+            label3 = new Label();
+            label2 = new Label();
+            label1 = new Label();
+            OOFelvesz = new Button();
+            OOUjOlv = new Button();
+            OOModosit = new Button();
+            OOSzerk = new Button();
+            OOListBox = new ListBox();
             tabPage3 = new TabPage();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
+            tabPage2.SuspendLayout();
             SuspendLayout();
             // 
             // tabControl1
@@ -159,6 +174,7 @@
             KKTorol.TabIndex = 5;
             KKTorol.Text = "Töröl";
             KKTorol.UseVisualStyleBackColor = true;
+            KKTorol.Click += KKTorol_Click;
             // 
             // KKFelvesz
             // 
@@ -190,6 +206,7 @@
             KKModosit.TabIndex = 2;
             KKModosit.Text = "Módosítás";
             KKModosit.UseVisualStyleBackColor = true;
+            KKModosit.Click += KKModosit_Click;
             // 
             // KKSzerkeszt
             // 
@@ -200,6 +217,7 @@
             KKSzerkeszt.TabIndex = 1;
             KKSzerkeszt.Text = "Szerkeztés";
             KKSzerkeszt.UseVisualStyleBackColor = true;
+            KKSzerkeszt.Click += KKSzerkeszt_Click;
             // 
             // KKListbox
             // 
@@ -209,9 +227,24 @@
             KKListbox.Name = "KKListbox";
             KKListbox.Size = new Size(698, 334);
             KKListbox.TabIndex = 0;
+            KKListbox.SelectedIndexChanged += KKListbox_SelectedIndexChanged;
             // 
             // tabPage2
             // 
+            tabPage2.Controls.Add(OOEletkor);
+            tabPage2.Controls.Add(OOCim);
+            tabPage2.Controls.Add(OONev);
+            tabPage2.Controls.Add(OOAzonsito);
+            tabPage2.Controls.Add(OOTorles);
+            tabPage2.Controls.Add(label4);
+            tabPage2.Controls.Add(label3);
+            tabPage2.Controls.Add(label2);
+            tabPage2.Controls.Add(label1);
+            tabPage2.Controls.Add(OOFelvesz);
+            tabPage2.Controls.Add(OOUjOlv);
+            tabPage2.Controls.Add(OOModosit);
+            tabPage2.Controls.Add(OOSzerk);
+            tabPage2.Controls.Add(OOListBox);
             tabPage2.Location = new Point(4, 24);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
@@ -219,6 +252,132 @@
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Olvasók";
             tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // OOEletkor
+            // 
+            OOEletkor.Location = new Point(688, 373);
+            OOEletkor.Name = "OOEletkor";
+            OOEletkor.Size = new Size(100, 23);
+            OOEletkor.TabIndex = 13;
+            // 
+            // OOCim
+            // 
+            OOCim.Location = new Point(430, 373);
+            OOCim.Name = "OOCim";
+            OOCim.Size = new Size(246, 23);
+            OOCim.TabIndex = 12;
+            // 
+            // OONev
+            // 
+            OONev.Location = new Point(81, 373);
+            OONev.Name = "OONev";
+            OONev.Size = new Size(337, 23);
+            OONev.TabIndex = 11;
+            // 
+            // OOAzonsito
+            // 
+            OOAzonsito.Enabled = false;
+            OOAzonsito.Location = new Point(8, 373);
+            OOAzonsito.Name = "OOAzonsito";
+            OOAzonsito.Size = new Size(47, 23);
+            OOAzonsito.TabIndex = 10;
+            // 
+            // OOTorles
+            // 
+            OOTorles.Enabled = false;
+            OOTorles.Location = new Point(698, 237);
+            OOTorles.Name = "OOTorles";
+            OOTorles.Size = new Size(75, 23);
+            OOTorles.TabIndex = 9;
+            OOTorles.Text = "Törlés";
+            OOTorles.UseVisualStyleBackColor = true;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(688, 346);
+            label4.Name = "label4";
+            label4.Size = new Size(43, 15);
+            label4.TabIndex = 8;
+            label4.Text = "Életkor";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(430, 346);
+            label3.Name = "label3";
+            label3.Size = new Size(29, 15);
+            label3.TabIndex = 7;
+            label3.Text = "Cím";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(81, 346);
+            label2.Name = "label2";
+            label2.Size = new Size(28, 15);
+            label2.TabIndex = 6;
+            label2.Text = "Név";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(8, 346);
+            label1.Name = "label1";
+            label1.Size = new Size(60, 15);
+            label1.TabIndex = 5;
+            label1.Text = "Azonosító";
+            // 
+            // OOFelvesz
+            // 
+            OOFelvesz.Enabled = false;
+            OOFelvesz.Location = new Point(698, 151);
+            OOFelvesz.Name = "OOFelvesz";
+            OOFelvesz.Size = new Size(75, 23);
+            OOFelvesz.TabIndex = 4;
+            OOFelvesz.Text = "Felvesz";
+            OOFelvesz.UseVisualStyleBackColor = true;
+            OOFelvesz.Click += OOFelvesz_Click;
+            // 
+            // OOUjOlv
+            // 
+            OOUjOlv.Location = new Point(698, 122);
+            OOUjOlv.Name = "OOUjOlv";
+            OOUjOlv.Size = new Size(75, 23);
+            OOUjOlv.TabIndex = 3;
+            OOUjOlv.Text = "Új olvasó";
+            OOUjOlv.UseVisualStyleBackColor = true;
+            OOUjOlv.Click += OOUjOlv_Click;
+            // 
+            // OOModosit
+            // 
+            OOModosit.Enabled = false;
+            OOModosit.Location = new Point(698, 62);
+            OOModosit.Name = "OOModosit";
+            OOModosit.Size = new Size(75, 23);
+            OOModosit.TabIndex = 2;
+            OOModosit.Text = "Módosítás";
+            OOModosit.UseVisualStyleBackColor = true;
+            OOModosit.Click += OOModosit_Click;
+            // 
+            // OOSzerk
+            // 
+            OOSzerk.Enabled = false;
+            OOSzerk.Location = new Point(698, 33);
+            OOSzerk.Name = "OOSzerk";
+            OOSzerk.Size = new Size(75, 23);
+            OOSzerk.TabIndex = 1;
+            OOSzerk.Text = "Szerkeztés";
+            OOSzerk.UseVisualStyleBackColor = true;
+            // 
+            // OOListBox
+            // 
+            OOListBox.FormattingEnabled = true;
+            OOListBox.ItemHeight = 15;
+            OOListBox.Location = new Point(0, 0);
+            OOListBox.Name = "OOListBox";
+            OOListBox.Size = new Size(676, 334);
+            OOListBox.TabIndex = 0;
             // 
             // tabPage3
             // 
@@ -238,9 +397,12 @@
             Name = "Form1";
             Text = "Form1";
             FormClosing += Form1_FormClosing;
+            Load += Form1_Load;
             tabControl1.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
             tabPage1.PerformLayout();
+            tabPage2.ResumeLayout(false);
+            tabPage2.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -264,5 +426,19 @@
         private TextBox KKname;
         private TextBox KKszer;
         private TextBox KKazon;
+        private Label label1;
+        private Button OOFelvesz;
+        private Button OOUjOlv;
+        private Button OOModosit;
+        private Button OOSzerk;
+        private ListBox OOListBox;
+        private TextBox OOEletkor;
+        private TextBox OOCim;
+        private TextBox OONev;
+        private TextBox OOAzonsito;
+        private Button OOTorles;
+        private Label label4;
+        private Label label3;
+        private Label label2;
     }
 }
