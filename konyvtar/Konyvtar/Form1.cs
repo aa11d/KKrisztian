@@ -72,6 +72,16 @@ namespace Konyvtar
             }
 
             sw.Close();
+
+
+            StreamWriter so = new StreamWriter(@"..\..\..\olvasok.txt");
+            for (int i = 0; i < OOListBox.Items.Count; i++)
+            {
+                string pontosss = OOListBox.Items[i].ToString().Replace(" - ", ";");
+                so.WriteLine(pontosss);
+            }
+
+            so.Close();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -230,10 +240,59 @@ namespace Konyvtar
                 }
             }
         }
+        private void OOSzerk_Click(object sender, EventArgs e)
+        {
+            string[] sorFeld = OOListBox.Items[OOListBox.SelectedIndex].ToString().Split(" - ");
+            OOAzonsito.Text = sorFeld[0].Substring(1, 4);
+            OONev.Text = sorFeld[1];
+            OOCim.Text = sorFeld[2];
+            OOEletkor.Text = sorFeld[3];
+            OOModosit.Enabled = true;
+        }
 
         private void OOModosit_Click(object sender, EventArgs e)
         {
-            
+            if (OONev.Text.Trim() == "")
+            {
+                MessageBox.Show("A név nincs megadva!");
+            }
+            else if (OOCim.Text.Trim() == "")
+            {
+                MessageBox.Show("A cím nem lehet üres");
+            }
+            else
+            {
+                try
+                {
+                    int ev = int.Parse(OOEletkor.Text);
+                    string sor = $"[{OOAzonsito.Text}] - {OONev.Text} - {OOCim.Text} - {OOEletkor.Text}";
+                    OOListBox.Items[OOListBox.SelectedIndex] = sor;
+                    OOModosit.Enabled = false;
+                }
+                catch (FormatException)
+                {
+                    MessageBox.Show("Hibás életkor!");
+                }
+            }
+        }
+
+        private void OOListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (OOListBox.SelectedIndex == -1)
+            {
+                OOTorles.Enabled = false;
+                OOSzerk.Enabled = false;
+            }
+            else
+            {
+                OOTorles.Enabled = true;
+                OOSzerk.Enabled = true;
+            }
+        }
+
+        private void OOTorles_Click(object sender, EventArgs e)
+        {
+            OOListBox.Items.RemoveAt(OOListBox.SelectedIndex);
         }
     }
 }

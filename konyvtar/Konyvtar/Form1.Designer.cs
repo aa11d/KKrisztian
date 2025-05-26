@@ -291,6 +291,7 @@
             OOTorles.TabIndex = 9;
             OOTorles.Text = "Törlés";
             OOTorles.UseVisualStyleBackColor = true;
+            OOTorles.Click += OOTorles_Click;
             // 
             // label4
             // 
@@ -369,6 +370,7 @@
             OOSzerk.TabIndex = 1;
             OOSzerk.Text = "Szerkeztés";
             OOSzerk.UseVisualStyleBackColor = true;
+            OOSzerk.Click += OOSzerk_Click;
             // 
             // OOListBox
             // 
@@ -378,6 +380,7 @@
             OOListBox.Name = "OOListBox";
             OOListBox.Size = new Size(676, 334);
             OOListBox.TabIndex = 0;
+            OOListBox.SelectedIndexChanged += OOListBox_SelectedIndexChanged;
             // 
             // tabPage3
             // 
