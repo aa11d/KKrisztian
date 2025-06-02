@@ -1,1 +1,3 @@
 [1000];asd;igen;2008
+[1001];Szelő;Valami;2011
+[1002];István;Valahol;2012

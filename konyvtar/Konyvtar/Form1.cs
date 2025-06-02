@@ -82,6 +82,18 @@ namespace Konyvtar
             }
 
             so.Close();
+
+
+
+            StreamWriter sk = new StreamWriter(@"..\..\..\kolcsonzesek.txt");
+            for (int i = 0; i < kzkListBox.Items.Count; i++)
+            {
+                // string pontossssssss = kzkListBox.Items[i].ToString().Replace(" - ", ";");
+                sk.WriteLine(kzkListBox.Items[i].ToString());
+            }
+
+
+            sk.Close();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -129,6 +141,29 @@ namespace Konyvtar
             catch (Exception ex)
             {
                 MessageBox.Show("Az olvasók fájl nem olvasható");
+            }
+
+
+
+            try
+            {
+
+
+                StreamReader sk = new StreamReader(@"..\..\..\kolcsonzesek.txt");
+
+                string ssoor = sk.ReadLine();
+                while (ssoor != null)
+                {
+                    // string kolcson = ssoor.Replace(";", " - ");
+                    kzkListBox.Items.Add(ssoor);
+                    ssoor = sk.ReadLine();
+                }
+
+                sk.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("A kölcsönzések fájl nem olvasható");
             }
         }
 
@@ -293,6 +328,82 @@ namespace Konyvtar
         private void OOTorles_Click(object sender, EventArgs e)
         {
             OOListBox.Items.RemoveAt(OOListBox.SelectedIndex);
+        }
+
+        private void kzkKolcsonzesek_Enter(object sender, EventArgs e)
+        {
+            kzkKolcsonzesek.Items.Clear();
+            // feltöltjük a könyvekkel
+            for (int ki = 0; ki < KKListbox.Items.Count; ki++)
+            {
+                string konyv = KKListbox.Items[ki].ToString();
+                kzkKolcsonzesek.Items.Add(konyv);
+            }
+        }
+
+        private void kzkKolcsonzesek_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (kzkKolcsonzesek.SelectedIndex != -1) // ha van kiválasztott elem
+            {
+                string konyv = kzkKolcsonzesek.Items[kzkKolcsonzesek.SelectedIndex].ToString();
+                string kkazon = konyv.Substring(1, 4); // (1023) - Kiss Péter...
+
+                bool megvan = false;
+                string kolcsonzes = "";
+                // keressük ezt a könyvet a kölcsönzések között
+                for (int kzki = 0; kzki < kzkListBox.Items.Count; kzki++)
+                {
+                    kolcsonzes = kzkListBox.Items[kzki].ToString();
+                    if (kolcsonzes.Substring(0, 4) == kkazon)
+                    {
+                        megvan = true;
+                        break; // ha megvan, akkor nem kell tovább a for ciklus
+                    }
+                }
+                if (megvan)
+                {
+                    string olvasoAzon = kolcsonzes.Substring(5, 4);
+                    // keressük az olvasó adatait az olvasó listában
+                    string Olvaso = "";
+                    bool megvanOlvaso = false;
+                    for (int olvi = 0; olvi < OOListBox.Items.Count; olvi++)
+                    {
+                        Olvaso = OOListBox.Items[olvi].ToString();
+                        if (Olvaso.Substring(1, 4) == olvasoAzon)
+                        {
+                            break;
+                        }
+                    }
+                    string[] feld = Olvaso.Split(" - ");
+                    kzkOlvNev.Text = feld[0] + feld[1];
+                    kzkMettol.Text = kolcsonzes.Substring(10, 10);
+                    kzkMeddig.Text = kolcsonzes.Substring(21, 10);
+                }
+                else // nincs kölcsönadva
+                {
+                    kzkOlvNev.Text = "";
+                    kzkMettol.Text = "";
+                    kzkMeddig.Text = "";
+                }
+            }
+        }
+
+        private void kzkVissza_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void kzkMeghossz_Click(object sender, EventArgs e)
+        {
+            string kolcsonzes = "";
+            for (int kzki = 0; kzki < kzkListBox.Items.Count; kzki++)
+            {
+                kolcsonzes = kzkListBox.Items[kzki].ToString();
+            }
+            string[] feld = kolcsonzes.Split(";");
+            string[] feldd = kolcsonzes.Split("-");
+            string feladarbotl = feld[3];
+            kzkKolcsonzesek.SelectedIndex = feladarbolt[feldd[3]]; 
         }
     }
 }

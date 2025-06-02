@@ -60,9 +60,20 @@
             OOSzerk = new Button();
             OOListBox = new ListBox();
             tabPage3 = new TabPage();
+            kzkMeghossz = new Button();
+            kzkVissza = new Button();
+            kzkMeddig = new TextBox();
+            kzkMettol = new TextBox();
+            kzkOlvNev = new TextBox();
+            label7 = new Label();
+            label6 = new Label();
+            label5 = new Label();
+            kzkKolcsonzesek = new ComboBox();
+            kzkListBox = new ListBox();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             tabPage2.SuspendLayout();
+            tabPage3.SuspendLayout();
             SuspendLayout();
             // 
             // tabControl1
@@ -384,12 +395,112 @@
             // 
             // tabPage3
             // 
+            tabPage3.Controls.Add(kzkMeghossz);
+            tabPage3.Controls.Add(kzkVissza);
+            tabPage3.Controls.Add(kzkMeddig);
+            tabPage3.Controls.Add(kzkMettol);
+            tabPage3.Controls.Add(kzkOlvNev);
+            tabPage3.Controls.Add(label7);
+            tabPage3.Controls.Add(label6);
+            tabPage3.Controls.Add(label5);
+            tabPage3.Controls.Add(kzkKolcsonzesek);
+            tabPage3.Controls.Add(kzkListBox);
             tabPage3.Location = new Point(4, 24);
             tabPage3.Name = "tabPage3";
             tabPage3.Size = new Size(794, 423);
             tabPage3.TabIndex = 2;
             tabPage3.Text = "Kölcsönzés";
             tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // kzkMeghossz
+            // 
+            kzkMeghossz.Location = new Point(658, 141);
+            kzkMeghossz.Name = "kzkMeghossz";
+            kzkMeghossz.Size = new Size(99, 46);
+            kzkMeghossz.TabIndex = 9;
+            kzkMeghossz.Text = "Meghosszabítás";
+            kzkMeghossz.UseVisualStyleBackColor = true;
+            kzkMeghossz.Click += kzkMeghossz_Click;
+            // 
+            // kzkVissza
+            // 
+            kzkVissza.Location = new Point(500, 141);
+            kzkVissza.Name = "kzkVissza";
+            kzkVissza.Size = new Size(99, 46);
+            kzkVissza.TabIndex = 8;
+            kzkVissza.Text = "Visszavétel";
+            kzkVissza.UseVisualStyleBackColor = true;
+            kzkVissza.Click += kzkVissza_Click;
+            // 
+            // kzkMeddig
+            // 
+            kzkMeddig.Enabled = false;
+            kzkMeddig.Location = new Point(706, 83);
+            kzkMeddig.Name = "kzkMeddig";
+            kzkMeddig.Size = new Size(85, 23);
+            kzkMeddig.TabIndex = 7;
+            // 
+            // kzkMettol
+            // 
+            kzkMettol.Enabled = false;
+            kzkMettol.Location = new Point(620, 83);
+            kzkMettol.Name = "kzkMettol";
+            kzkMettol.Size = new Size(83, 23);
+            kzkMettol.TabIndex = 6;
+            // 
+            // kzkOlvNev
+            // 
+            kzkOlvNev.Enabled = false;
+            kzkOlvNev.Location = new Point(496, 83);
+            kzkOlvNev.Name = "kzkOlvNev";
+            kzkOlvNev.Size = new Size(118, 23);
+            kzkOlvNev.TabIndex = 5;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(706, 65);
+            label7.Name = "label7";
+            label7.Size = new Size(51, 15);
+            label7.TabIndex = 4;
+            label7.Text = "Meddig:";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(619, 65);
+            label6.Name = "label6";
+            label6.Size = new Size(45, 15);
+            label6.TabIndex = 3;
+            label6.Text = "Mettől:";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(500, 65);
+            label5.Name = "label5";
+            label5.Size = new Size(73, 15);
+            label5.TabIndex = 2;
+            label5.Text = "Kölcsönzője:";
+            // 
+            // kzkKolcsonzesek
+            // 
+            kzkKolcsonzesek.FormattingEnabled = true;
+            kzkKolcsonzesek.Location = new Point(496, 23);
+            kzkKolcsonzesek.Name = "kzkKolcsonzesek";
+            kzkKolcsonzesek.Size = new Size(288, 23);
+            kzkKolcsonzesek.TabIndex = 1;
+            kzkKolcsonzesek.SelectedIndexChanged += kzkKolcsonzesek_SelectedIndexChanged;
+            kzkKolcsonzesek.Enter += kzkKolcsonzesek_Enter;
+            // 
+            // kzkListBox
+            // 
+            kzkListBox.FormattingEnabled = true;
+            kzkListBox.ItemHeight = 15;
+            kzkListBox.Location = new Point(3, 3);
+            kzkListBox.Name = "kzkListBox";
+            kzkListBox.Size = new Size(487, 274);
+            kzkListBox.TabIndex = 0;
             // 
             // Form1
             // 
@@ -406,6 +517,8 @@
             tabPage1.PerformLayout();
             tabPage2.ResumeLayout(false);
             tabPage2.PerformLayout();
+            tabPage3.ResumeLayout(false);
+            tabPage3.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -443,5 +556,15 @@
         private Label label4;
         private Label label3;
         private Label label2;
+        private ListBox kzkListBox;
+        private ComboBox kzkKolcsonzesek;
+        private Label label5;
+        private TextBox kzkMeddig;
+        private TextBox kzkMettol;
+        private TextBox kzkOlvNev;
+        private Label label7;
+        private Label label6;
+        private Button kzkMeghossz;
+        private Button kzkVissza;
     }
 }

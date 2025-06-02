@@ -1,1 +1,3 @@
 [1000];asd;ads;56
+[1001];Lakatos;Budapest;54
+[1002];József;Hatvan;22
