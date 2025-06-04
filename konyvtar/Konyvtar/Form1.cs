@@ -390,20 +390,59 @@ namespace Konyvtar
 
         private void kzkVissza_Click(object sender, EventArgs e)
         {
+            string konyv = kzkKolcsonzesek.Items[kzkKolcsonzesek.SelectedIndex].ToString();
+            string konyvazon = konyv.Substring(0, 4);
+            string kolcsonzes = "";
+            int hol = 0;
+            for (int kzki = 0; kzki < kzkListBox.Items.Count; kzki++)
+            {
+                kolcsonzes = kzkListBox.Items[kzki].ToString();
+                if (kolcsonzes.Substring(0, 4) == konyvazon)
+                {
+                    hol = kzki;
+                    break;
+                }
+            }
+            kzkListBox.Items.RemoveAt(hol);
+            kzkOlvNev.Text = "";
+            kzkMettol.Text = "";
+            kzkMeddig.Text = "";
             
         }
 
         private void kzkMeghossz_Click(object sender, EventArgs e)
         {
-            string kolcsonzes = "";
-            for (int kzki = 0; kzki < kzkListBox.Items.Count; kzki++)
+            if (kzkKolcsonzesek.SelectedIndex >= 0)
             {
-                kolcsonzes = kzkListBox.Items[kzki].ToString();
+
+                string konyv = kzkKolcsonzesek.Items[kzkKolcsonzesek.SelectedIndex].ToString();
+                string konyvazon = konyv.Substring(1, 4);
+                string kolcsonzes = "";
+                int hol = 0;
+                for (int kzki = 0; kzki < kzkListBox.Items.Count; kzki++)
+                {
+                    kolcsonzes = kzkListBox.Items[kzki].ToString();
+                    if (kolcsonzes.Substring(0, 4) == konyvazon)
+                    {
+                        string[] feld = kolcsonzes.Split(";");
+                        string med = feld[3];
+                        string[] feld2 = med.Split("-");
+                        int honap = int.Parse(feld2[1]);
+                        int nap = int.Parse(feld2[2]);
+                        nap += 10;
+                        if (nap > 30)
+                        {
+                            nap -= 30;
+                            honap++;
+
+                        }
+                        string hh = $"{honap:00}";
+                        string nn = $"{nap:00}";
+                        string ujkolcs = kolcsonzes.Substring(0, kolcsonzes.Length - 5) + hh + "-" + nn;
+                        kzkListBox.Items[kzki] = ujkolcs;
+                    }
+                }
             }
-            string[] feld = kolcsonzes.Split(";");
-            string[] feldd = kolcsonzes.Split("-");
-            string feladarbotl = feld[3];
-            kzkKolcsonzesek.SelectedIndex = feladarbolt[feldd[3]]; 
         }
     }
 }
